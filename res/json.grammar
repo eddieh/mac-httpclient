@@ -43,8 +43,8 @@ colon         = ':';
     
     closeCurly = '}'.discard;
     
-    Feed this grammar to -[TDGrammarParserFactory parserForGrammar:assembler:] along with a reference
-    to an assembler (a call back delegate), and it will return a TDParser object which can 
+    Feed this grammar to -[PKGrammarParserFactory parserForGrammar:assembler:] along with a reference
+    to an assembler (a call back delegate), and it will return a PKParser object which can 
     parse strings conforming to this language/grammar.
         
     The when the returned parser is used, the provided assembler will receive method callbacks for each production matched, like:
@@ -56,7 +56,7 @@ colon         = ':';
     -workOnOpenCurlyAssembly:
     etc.
     
-    Each callback method must accept a single TDAssembly argument. This assembly argument
+    Each callback method must accept a single PKAssembly argument. This assembly argument
     will contain information about the progress made on the the string currently being parsed.
     Also the assembly's stack will contain the tokens parsed so far in the current statement.
 

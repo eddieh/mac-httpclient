@@ -1,6 +1,6 @@
 //
 //  TDHtmlSyntaxHighlighter.h
-//  TDParseKit
+//  ParseKit
 //
 //  Created by Todd Ditchendorf on 8/28/08.
 //  Copyright 2008 __MyCompanyName__. All rights reserved.
@@ -8,27 +8,27 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class TDTokenizer;
-@class TDToken;
+@class PKTokenizer;
+@class PKToken;
 
 @interface TDHtmlSyntaxHighlighter : NSObject {
     BOOL isDarkBG;
     BOOL inScript;
-    TDTokenizer *tokenizer;
+    PKTokenizer *tokenizer;
     NSMutableArray *stack;
-    TDToken *ltToken;
-    TDToken *gtToken;
-    TDToken *startCommentToken;
-    TDToken *endCommentToken;
-    TDToken *startCDATAToken;
-    TDToken *endCDATAToken;
-    TDToken *startPIToken;
-    TDToken *endPIToken;
-    TDToken *startDoctypeToken;
-    TDToken *fwdSlashToken;
-    TDToken *eqToken;
-    TDToken *scriptToken;
-    TDToken *endScriptToken;
+    PKToken *ltToken;
+    PKToken *gtToken;
+    PKToken *startCommentToken;
+    PKToken *endCommentToken;
+    PKToken *startCDATAToken;
+    PKToken *endCDATAToken;
+    PKToken *startPIToken;
+    PKToken *endPIToken;
+    PKToken *startDoctypeToken;
+    PKToken *fwdSlashToken;
+    PKToken *eqToken;
+    PKToken *scriptToken;
+    PKToken *endScriptToken;
     
     NSMutableAttributedString *highlightedString;
     NSDictionary *headerNameAttributes;
